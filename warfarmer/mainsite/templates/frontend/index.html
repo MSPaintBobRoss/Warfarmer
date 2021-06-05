@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>
+            Warfarmer
+        </title>
+        {% load static %}
+        <link href="{% static 'mainsite/css/homepage.css' %}" rel="stylesheet">
+        <meta name="Warfarmer" content="A well-written description should probably go here. No.">
+    </head>
+    <body>
+        <div class="container">
+            <!--Title box and top 3-->
+            <header>
+                <h1>Warfarmer</h1>
+            </header>
+
+            <!--Prime Box-->
+            <div class="primeBox">
+                <h2>Primes</h2>
+                <!--primeList will be populated with js-->
+                <div class="primeList" id="primeList"></div>
+            </div>
+
+            <!--Prime Focus Box-->
+            <div class="primeFocus">
+                <div class="primeFocusHead">
+                    <h2 id="itemName">Prime</h2>
+                    <div id="wishDiv" class="wishDiv"></div>
+                </div>
+                <div class="primeFocusContent">
+                    <table id="itemTable"></table>
+                    <span id="itemPlaceholder"><br><br>Select a prime on the left to see more info...</span>
+                </div>
+            </div>
+
+            <!--Wishlist Box-->
+            <div class="wishlistBox">
+                <div class="wishlistTitle">
+                    <h2>Wishlist</h2>
+                </div>
+                <div class="wishlistContent">
+                    <table id="wishTable"><!--Wishtable content goes here--></table>
+                </div>
+            </div>
+
+            <!--Wishlist Relics Box-->
+            <div class="wishRelicBox">
+                <div class="wishRelicTitle">
+                    <h2>Drop Locations</h2>
+                </div>
+                <div class="wishRelicContent">
+                    <table id="wishRelicTable">
+                        <!--Example Content-->
+                        <tr>
+                            <td class="locationRowExpander"><a>Apollodorus, Mercury (2)</a></td>
+                            <td><</td>
+                        </tr>
+                        <tr>
+                            <td class="locationRowExpander"><a>Piscinas, Saturn (1)</a></td>
+                            <td><</td>
+                        </tr>
+                        <tr>
+                            <td class="locationRowExpander"><a>Xini, Eris (1)</a></td>
+                            <td><</td>
+                        </tr>
+                        <!--End of example-->
+                    </table>
+                </div>
+            </div>
+
+            <!--Relic Focus Box-->
+            <div class="relics">
+                <h2 id="relicTitle">Relic Info</h2>
+                <div class="relicInfo" id="relicInfo"><br><br>Select a relic to see more info...</div>
+            </div>
+        
+            <!--Footer-->
+            <footer>
+                <p>Created by Luca Letizia and Erik Kriz</p>
+            </footer>
+        </div>
+        <script src='jScripts/mainContent.js'></script><script>
+        function showPrime(name){
+            document.getElementById("itemName").innerHTML = name;
+        }
+        </script>
+    </body>
+</html>
